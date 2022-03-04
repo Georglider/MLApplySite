@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div class="wrapper">
+    <form action="" method="post" class="form-input">
+
+                    <p>
+                        <label>
+                            <input class="input" type="text" name="username" placeholder="Username">
+                        </label>
+                        <button type="submit" class="btn btn-primary submit-button-da">Search</button>
+                    </p>
+    </form>
+        {% if name and guild%}
+            <p>{{ name }} {{ guild }} в гильдию</p>
+        {% endif %}
+    </div>
+
+</body>
+</html>
