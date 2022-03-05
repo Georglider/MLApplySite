@@ -1,6 +1,5 @@
 import math
 import time
-
 from mlapplysite.blueprints.main import main
 from flask import render_template
 import requests
@@ -140,7 +139,7 @@ def mainpage():
                 else:
                     da = "Не подходит"
             except:
-                logger.debug('Error in data')
+                logger.error('Error in data')
         except:
             logger.error('Error POST method')
 

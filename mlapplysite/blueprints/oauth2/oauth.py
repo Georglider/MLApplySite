@@ -5,7 +5,7 @@ class Oauth:
     client_id = "912063533083160607"
     client_secret = "7a6XgDsmdFEdX3hjgKFhCkP42Uhgg0RS"
     redirect_uri = "http://127.0.0.1:5000/login"
-    scope = "identify%20email"
+    scope = "identify"
     discord_login_url = f"https://discord.com/api/oauth2/authorize?client_id={client_id}&redirect_uri={redirect_uri}&response_type=code&scope={scope}"
     discord_token_url = "https://discord.com/api/oauth2/token"
     discord_api_url = "https://discord.com/api"
