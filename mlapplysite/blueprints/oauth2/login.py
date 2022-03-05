@@ -1,3 +1,4 @@
+import time
 
 from mlapplysite.blueprints.oauth2 import oauth
 import requests
@@ -11,7 +12,7 @@ data = sqlite3.connect("server.db", check_same_thread=False)
 sql = data.cursor()
 sql.execute(f'''CREATE TABLE IF NOT EXISTS users (
             user_id INTEGER,
-            name TEXT
+            username TEXT
             )''')
 
 logger.debug("Connected to database")
@@ -33,4 +34,5 @@ def login():
     sql.execute("INSERT INTO users VALUES (?,?)", (f"{username}",  name))
     data.commit()
     logger.debug(f"{username} added to database")
-    return "aga potom chto - to bydet"
+    time.sleep(3)
+    return redirect("https://discord.gg/xmDcEGd4", code=302)
