@@ -16,7 +16,7 @@ sql.execute(f'''CREATE TABLE IF NOT EXISTS users (
 
 logger.debug("Connected to database")
 
-@oauth.route("/", methods=["get"])
+@oauth.route("/redirecturl", methods=["get"])
 def index():
     return redirect(Oauth.discord_login_url)
 
@@ -33,4 +33,4 @@ def login():
     sql.execute("INSERT INTO users VALUES (?,?)", (f"{username}",  name))
     data.commit()
     logger.debug(f"{username} added to database")
-    return redirect('/test')
+    return "aga potom chto - to bydet"

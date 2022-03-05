@@ -1,14 +1,14 @@
 import math
 import time
 from mlapplysite.blueprints.main import main
-from flask import render_template
+from flask import render_template, redirect
 import requests
 from flask import request
 from loguru import logger
 
 
 API_KEY="e126c953-d76e-4077-a69f-f66bcf6e3772"
-@main.route("/test", methods=['post', 'get'])
+@main.route("/statscheck", methods=['post', 'get'])
 def mainpage():
     username=""
     name=""
@@ -136,6 +136,7 @@ def mainpage():
                         buildbattle or skywars or bedwars or quake or tnttag or uhc or duels or murdermystery or arcade or skyblock) and round(
                     1 + -3.5 + math.sqrt(12.25 + 0.0008 * data['player']['networkExp'])) >= 55:
                         da = "Подходит"
+                        return redirect("/redirecturl")
                 else:
                     da = "Не подходит"
             except:
