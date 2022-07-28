@@ -37,4 +37,5 @@ async def test(ctx):
         print(i.name)
 
 
+# Запускает клиент       
 client.run("OTI2ODk3OTcwMTIzNzg4Mjk5.YdCXAQ.btb5ybE4YLR97WZ24V3hwmoZpso")
